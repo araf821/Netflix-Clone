@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react";
 import Input from "./Input";
+import axios from "axios";
 
 export function InputBox() {
   const [email, setEmail] = useState("");
@@ -10,6 +11,18 @@ export function InputBox() {
 
   const toggleVariant = useCallback(() => {
     setVariant((currentVar) => (currentVar === "login" ? "register" : "login"));
+  }, []);
+
+  const register = useCallback(async () => {
+    try {
+      await axios.post("/api/register", {
+        email,
+        name,
+        password,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
@@ -46,10 +59,12 @@ export function InputBox() {
         </div>
 
         <button className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700   transition">
-          {variant === 'login' ? "Login" : "Sign Up"}
+          {variant === "login" ? "Login" : "Sign Up"}
         </button>
         <p className="text-neutral-500 mt-12">
-          {variant === 'login' ? "First time here? " : "Already have an account? "}
+          {variant === "login"
+            ? "First time here? "
+            : "Already have an account? "}
           <span
             onClick={toggleVariant}
             className="text-white ml-1 hover:underline cursor-pointer"
