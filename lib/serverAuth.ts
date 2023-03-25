@@ -15,4 +15,12 @@ const serverAuth = async (req: NextApiRequest) => {
       email: session.user.email,
     },
   });
+
+  if (!currentUser) {
+    throw new Error("You're not signed in.");
+  }
+
+  return { currentUser };
 };
+
+export default serverAuth;
