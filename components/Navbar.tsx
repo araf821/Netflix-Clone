@@ -1,4 +1,6 @@
 import NavbarItem from "./NavbarItem";
+import { BsChevronDown } from "react-icons/bs";
+import DropDownMenu from "./DropDownMenu";
 
 const Navbar = () => {
   return (
@@ -27,7 +29,28 @@ const Navbar = () => {
 
         "
         >
-          <NavbarItem />
+          <NavbarItem label="Home" />
+          <NavbarItem label="Series" />
+          <NavbarItem label="Movies" />
+          <NavbarItem label="New & Popular" />
+          <NavbarItem label="My List" />
+          <NavbarItem label="Browse By Languages" />
+        </div>
+        <div
+          className="
+            lg:hidden
+            flex
+            flex-row
+            items-center
+            gap-2
+            ml-8
+            cursor-pointer
+            relative
+        "
+        >
+          <p className="text-white text-sm">Browse</p>
+          <BsChevronDown className="text-white" />
+          <DropDownMenu visible />
         </div>
       </div>
     </nav>

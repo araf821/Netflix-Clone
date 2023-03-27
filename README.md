@@ -1,12 +1,14 @@
 # Netlix Clone
 
-This is an clone of the Netlix web app created using Next.js, TypeScript, MongoDB, Prisma, and OAuth.
+This is a clone of the Netlix web app created using Next.js, TypeScript, Tailwind, MongoDB, Prisma, OAuth.
 
-## Next.js Generated 
+---
+
+### Next.js Generated 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Getting Started
 
 First, run the development server:
 
