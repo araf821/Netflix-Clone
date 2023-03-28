@@ -24,6 +24,21 @@ const DropDownMenu: React.FC<MenuProps> = ({ visible }) => {
     >
       <div className="flex flex-col gap-4">
         <div className="px-3 text-center text-white hover:underline">Home</div>
+        <div className="px-3 text-center text-white hover:underline">
+          Series
+        </div>
+        <div className="px-3 text-center text-white hover:underline">
+          Movies
+        </div>
+        <div className="px-3 text-center text-white hover:underline">
+          Trending
+        </div>
+        <div className="px-3 text-center text-white hover:underline">
+          My List
+        </div>
+        <div className="px-3 text-center text-white hover:underline">
+          Browse By Languages
+        </div>
       </div>
     </div>
   );
