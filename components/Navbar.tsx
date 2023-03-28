@@ -1,8 +1,15 @@
 import NavbarItem from "./NavbarItem";
 import { BsChevronDown } from "react-icons/bs";
 import DropDownMenu from "./DropDownMenu";
+import { useCallback, useState } from "react";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = useCallback(() => {
+    setShowMenu((currentVal => !currentVal));
+  }, []);
+
   return (
     <nav className="w-full fixed z-10">
       <div
@@ -47,10 +54,11 @@ const Navbar = () => {
             cursor-pointer
             relative
         "
+          onClick={toggleMenu}
         >
           <p className="text-white text-sm">Browse</p>
           <BsChevronDown className="text-white" />
-          <DropDownMenu visible />
+          <DropDownMenu visible={showMenu} />
         </div>
       </div>
     </nav>
