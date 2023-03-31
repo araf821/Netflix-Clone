@@ -1,3 +1,4 @@
+import useCurrentUser from "@/hooks/useCurrentUser";
 import { signOut } from "next-auth/react";
 
 interface AccountDropDownProps {
@@ -5,6 +6,8 @@ interface AccountDropDownProps {
 }
 
 const AccountDropDown: React.FC<AccountDropDownProps> = ({ visible }) => {
+  const { data } = useCurrentUser();
+
   if (!visible) {
     return null;
   }
@@ -19,7 +22,7 @@ const AccountDropDown: React.FC<AccountDropDownProps> = ({ visible }) => {
             alt="profile"
           />
           <p className="text-white text-sm group-hover/item:underline">
-            Username
+            {data?.name}
           </p>
         </div>
         <hr className="bg-gray-600 border-0 h-px my-4" />
