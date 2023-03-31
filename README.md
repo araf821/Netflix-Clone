@@ -1,10 +1,23 @@
 # Netlix Clone
 
-This is a clone of the Netlix web app created using Next.js, TypeScript, Tailwind, MongoDB, Prisma, OAuth.
+#### A clone of the Netlix web app created using Next.js, TypeScript, Tailwind, MongoDB, Prisma and OAuth, and deployed using Vercel.
 
 ---
 
-### Next.js Generated 
+#### Features:
+
+- Login using Google or GitHub using OAuth
+- Profile selection page
+- Add movies to My List
+- Remove movies from My List
+- Get more info on the movie through a pop-up modal
+- Watch the available movies
+
+Data was stolen from [here](https://gist.github.com/jsturgis/3b19447b304616f18657).
+
+---
+
+### Next.js Generated
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
