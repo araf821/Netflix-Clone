@@ -2,6 +2,8 @@
 
 #### A clone of the Netlix web app created using Next.js, TypeScript, Tailwind, MongoDB, Prisma and OAuth, and deployed using Vercel.
 
+Check out the completed project [here](https://netflix-clone-araf821.vercel.app/auth).
+
 ---
 
 #### Features:
